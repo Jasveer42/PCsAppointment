@@ -1,0 +1,18 @@
+Create table Users
+(FirstName Varchar(50),LastName Varchar(50),
+Password Varchar(30),UserId Varchar(50),
+UserType Varchar(50),Email Varchar(50),
+Constraint User_PK Primary Key (UserID),
+CHECK (UserType IN ('Student','Pedagogical Counselor')));
+
+
+Create Table Requests
+(Description VARCHAR(500),StartTime varchar(50),UserId varchar(50),
+EndTime Varchar(50),DateForAppointment Varchar(50),RequestID Varchar(50),
+Constraint Request_PK Primary Key (RequestID),
+Constraint Request_FK Foreign Key  (UserID) References Users(UserId));
+
+Create Table Identification
+(UniqueIndentificationNo Varchar(50),
+UserName Varchar(50),
+Constraint Student_Pk Primary Key (UniqueIndentificationNo));

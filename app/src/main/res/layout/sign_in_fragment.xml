@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/signin_fragment"
+    android:background="@drawable/back"
+    tools:context=".SignIn">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:id="@+id/user_id"
+            android:layout_marginTop="150dp"
+            android:hint="User Name"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:id="@+id/password"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_below="@id/user_id"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/password"
+            android:id="@+id/student_signin_btn"
+            android:text="Student"
+            android:background="@drawable/btn_color"
+            />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/student_signin_btn"
+            android:id="@+id/pc_signin_btn"
+            android:text="Pedagogical Counsellor"
+            android:background="@drawable/btn_color"/>
+    </RelativeLayout>
+
+</FrameLayout>
