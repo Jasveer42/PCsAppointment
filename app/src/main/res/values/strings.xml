@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PCs Appointment</string>
+    <string name="user_opt">Select user type</string>
+    <string-array name="users_type">
+        <item>Student</item>
+        <item>Pedagogical Counsellor</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

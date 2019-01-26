@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/stud_landing_fragment"
+    android:background="@drawable/back">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="Profile"
+            android:layout_marginTop="150dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/stud_profile"
+            android:background="@drawable/btn_color"/>
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="View Request"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/stud_profile"
+            android:id="@+id/stud_view_request"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_color"/>
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="History"
+            android:layout_below="@id/stud_view_request"
+            android:id="@+id/stud_history"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_color"/>
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:text="Signout"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/stud_history"
+            android:id="@+id/stud_signout"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_color"/>
+    </RelativeLayout>
+</FrameLayout>
