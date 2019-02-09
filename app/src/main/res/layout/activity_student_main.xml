@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".activity.student.StudentMainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="56dp"
+        android:orientation="vertical">
+
+        <!-- <ImageView
+             android:id="@+id/logo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:contentDescription="logo"
+             android:src="@drawable/logo2" />-->
+
+        <Button
+            android:id="@+id/btnUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="15dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="User Profile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/btnViewAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/btnUserProfile"
+            android:layout_marginTop="15dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="View Appointments"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/btnViewRequestResponse"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/btnCreateAppointmentSlot"
+            android:layout_marginTop="15dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="View Requests Response"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/btnViewRequestResponse"
+            android:layout_alignStart="@+id/match_parent"
+            android:layout_marginTop="15dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="logout"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    </LinearLayout>
+</RelativeLayout>

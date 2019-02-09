@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".activity.consultant.ConsultantMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp">
+
+        <!--   <ImageView
+               android:id="@+id/logo"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:contentDescription="logo"
+               android:src="@drawable/logo2" />-->
+
+        <Button
+            android:id="@+id/btnUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="User Profile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/btnCreateAppointmentSlot"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/btnUserProfile"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="0dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="Create Appointment"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/btnViewAppointmentSlots"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_above="@+id/btnLogout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="View Appointments"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/btnViewRequests"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="251dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="View Student Requests"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:text="logout"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    </RelativeLayout>
+</RelativeLayout>
