@@ -9,36 +9,43 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_height="603dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_width="375dp"
+            android:layout_height="85dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:background="?attr/colorBackgroundFloating"
             android:gravity="center"
             android:text="SIGN IN"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnerUserType"
             style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_width="375dp"
+            android:layout_height="67dp"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="60dp"
             android:layout_marginRight="20dp"
             android:background="?attr/colorButtonNormal"
             android:entries="@array/users_type"
             android:gravity="center"
             android:prompt="@string/user_opt"
             android:spinnerMode="dialog"
+
             android:textAlignment="center"
+
             android:textSize="26sp" />
 
         <android.support.design.widget.TextInputLayout
@@ -57,7 +64,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
-                android:hint="User Id"
+                android:hint="@string/UserName"
                 android:inputType="text"
                 android:textAlignment="center"
                 android:textSize="30sp" />
@@ -80,7 +87,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
-                android:hint="Password"
+                android:hint="@string/Password"
                 android:inputType="textPassword"
                 android:textAlignment="center"
                 android:textSize="24sp" />

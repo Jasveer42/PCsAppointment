@@ -7,4 +7,10 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Password">Password</string>
+    <string name="UserName">Enter User Name</string>
+
+    <style name="users_type" parent="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="android:textSize">30sp</item>
+    </style>
 </resources>

@@ -38,7 +38,67 @@ public class StudentRequestResponseListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_request_response_list_activity);
 
+        rvStudentRR = (RecyclerView) findViewById(R.id.rvStudentRR);
+        String userId = PrefManager.readPreference(this, PrefManager.LOGIN_ID);
 
+        rvStudentRR.setHasFixedSize(true);
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        rvStudentRR.setLayoutManager(layoutManager);
+        adapter = new StudentRequestResponseListAdapter(this, arrData);
+        rvStudentRR.setAdapter(adapter);
+
+        if (PrefManager.isNetworkAvailable(StudentRequestResponseListActivity.this))
+            requestResponse(userId);
+        else
+            Toast.makeText(StudentRequestResponseListActivity.this, "No Internet Available", Toast.LENGTH_SHORT).show();
+    }
+
+    private void requestResponse(String userId) {
+        String url = API.STUDENT_REQUEST_RESPONSE_URL + userId;
+
+        final ProgressDialog pDialog = new ProgressDialog(this);
+        pDialog.setMessage("Loading...");
+        pDialog.show();
+
+        JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.GET,
+                url, null,
+                new Response.Listener<JSONObject>() {
+
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Log.d(TAG, response.toString());
+                        pDialog.hide();
+                        try {
+                            if (response.getString("Status").equalsIgnoreCase(API.STATUS_OK)) {
+                                arrData.clear();
+                                JSONArray jArray = response.getJSONArray("Detail");
+                                for (int i = 0; i < jArray.length(); i++) {
+                                    arrData.add(jArray.getJSONObject(i));
+                                }
+                                adapter.notifyDataSetChanged();
+                            } else {
+                                Toast.makeText(StudentRequestResponseListActivity.this, "Unable to Fetch Data", Toast.LENGTH_SHORT).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(StudentRequestResponseListActivity.this, "Error Reading Data", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                VolleyLog.d(TAG, "Error: " + error.getMessage());
+                // hide the progress dialog
+                pDialog.hide();
+                Toast.makeText(StudentRequestResponseListActivity.this, "Error Connection", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Adding request to request queue
+        //RequestQueue.addToRequestQueue(jsonObjReq, tag_json_obj);
+        jsonObjReq.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        Volley.newRequestQueue(this).add(jsonObjReq);
     }
 
 }
